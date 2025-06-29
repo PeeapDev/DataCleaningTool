@@ -1,0 +1,32 @@
+2025-06-27 17:29:49,993 - __main__ - INFO - Starting application. Log file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/logs/app_20250627_172949.log
+2025-06-27 17:29:49,993 - __main__ - INFO - Global exception handler installed
+2025-06-27 17:29:49,994 - app.utils.memory_monitor - INFO - Memory monitoring started
+2025-06-27 17:29:49,996 - __main__ - INFO - Memory monitoring started
+2025-06-27 17:49:48,292 - app.controllers.data_cleaner - INFO - Clearing previous data and resetting state.
+2025-06-27 17:49:48,325 - app.views.main_window - INFO - Loading file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx (0.58 MB)
+2025-06-27 17:49:48,326 - app.controllers.data_cleaner - INFO - Loading data from /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 17:49:48,630 - app.controllers.data_cleaner - INFO - Detected 9 columns in /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 17:49:48,921 - app.controllers.data_cleaner - INFO - Got preview with 9 columns
+2025-06-27 17:49:48,921 - app.controllers.data_cleaner - INFO - Using Excel safeguard for safer loading
+2025-06-27 17:49:48,921 - app.utils.excel_safeguard - INFO - Starting safe Excel loading for: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 17:49:48,926 - app.utils.excel_safeguard - INFO - Excel file size: 612029 bytes, using engine: openpyxl
+2025-06-27 17:49:48,926 - app.utils.excel_safeguard - INFO - Attempting Excel loading strategy 1
+2025-06-27 17:49:49,224 - app.utils.excel_safeguard - INFO - Found 9,259 rows using openpyxl.
+2025-06-27 17:49:49,226 - app.utils.excel_safeguard - WARNING - Direct (chunked) load failed: read_excel() got an unexpected keyword argument 'iterator'
+2025-06-27 17:49:49,227 - app.utils.excel_safeguard - DEBUG - Traceback (most recent call last):
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/utils/excel_safeguard.py", line 132, in _try_direct_load
+TypeError: read_excel() got an unexpected keyword argument 'iterator'
+
+2025-06-27 17:49:49,227 - app.utils.excel_safeguard - INFO - Attempting Excel loading strategy 2
+2025-06-27 17:49:49,227 - app.utils.excel_safeguard - INFO - Trying fallback engine: xlrd
+2025-06-27 17:49:49,231 - app.utils.excel_safeguard - WARNING - Fallback engine failed: Excel xlsx file; not supported
+2025-06-27 17:49:49,231 - app.utils.excel_safeguard - INFO - Attempting Excel loading strategy 3
+2025-06-27 17:49:49,234 - app.utils.excel_safeguard - INFO - Attempting emergency conversion with external tools
+2025-06-27 17:49:49,235 - app.utils.excel_safeguard - INFO - Excel file appears to be XLSX (zip format)
+2025-06-27 17:49:49,236 - app.utils.excel_safeguard - INFO - Excel loading strategy 3 succeeded
+2025-06-27 17:49:49,236 - app.controllers.data_cleaner - INFO - Excel safely converted to CSV at /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmplkw_dnkc.csv
+2025-06-27 17:49:49,236 - app.controllers.data_cleaner - INFO - Estimated 4 rows in converted CSV
+2025-06-27 17:49:49,237 - app.views.main_window - ERROR - Error loading data: 'PandasTableModel' object has no attribute 'set_data'
+2025-06-27 18:10:42,442 - app.utils.memory_monitor - INFO - Memory monitoring stopped. Peak usage: 215.78125 MB
+2025-06-27 18:10:42,443 - __main__ - INFO - Memory monitoring stopped
+2025-06-27 18:10:42,443 - __main__ - INFO - Application shutting down

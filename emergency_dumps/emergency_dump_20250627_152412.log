@@ -1,0 +1,63 @@
+=== EMERGENCY MEMORY DUMP ===
+Time: 2025-06-27 15:24:12.667449
+Reason: Critical memory usage: 240928.00 MB
+Current memory: 219360.00 MB
+Peak memory: 240928.00 MB
+
+=== STACK TRACE ===
+
+Thread 6177583104:
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py", line 1012, in _bootstrap
+    self._bootstrap_inner()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py", line 1041, in _bootstrap_inner
+    self.run()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py", line 992, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/views/main_window.py", line 227, in load_data_thread
+    preview_data[0] = self.data_cleaner.load_data(
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/controllers/data_cleaner.py", line 154, in load_data
+    preview = pd.read_excel(file_path, nrows=10,
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/venv/lib/python3.13/site-packages/pandas/io/excel/_base.py", line 495, in read_excel
+    io = ExcelFile(
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/venv/lib/python3.13/site-packages/pandas/io/excel/_base.py", line 1567, in __init__
+    self._reader = self._engines[engine](
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/venv/lib/python3.13/site-packages/pandas/io/excel/_openpyxl.py", line 553, in __init__
+    super().__init__(
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/venv/lib/python3.13/site-packages/pandas/io/excel/_base.py", line 573, in __init__
+    self.book = self.load_workbook(self.handles.handle, engine_kwargs)
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/venv/lib/python3.13/site-packages/pandas/io/excel/_openpyxl.py", line 572, in load_workbook
+    return load_workbook(
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/venv/lib/python3.13/site-packages/openpyxl/reader/excel.py", line 346, in load_workbook
+    reader.read()
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/venv/lib/python3.13/site-packages/openpyxl/reader/excel.py", line 289, in read
+    self.read_strings()
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/venv/lib/python3.13/site-packages/openpyxl/reader/excel.py", line 147, in read_strings
+    self.shared_strings = reader(src)
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/venv/lib/python3.13/site-packages/openpyxl/reader/strings.py", line 16, in read_string_table
+    for _, node in iterparse(xml_source):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/xml/etree/ElementTree.py", line 1238, in iterator
+    data = source.read(16 * 1024)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/zipfile/__init__.py", line 1015, in read
+    data = self._read1(n)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/zipfile/__init__.py", line 1091, in _read1
+    data = self._decompressor.decompress(data, n)
+
+Thread 6152155136:
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py", line 1012, in _bootstrap
+    self._bootstrap_inner()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py", line 1041, in _bootstrap_inner
+    self.run()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py", line 992, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/utils/memory_monitor.py", line 91, in _monitor_thread_func
+    self._write_emergency_dump(f"Critical memory usage: {current_usage:.2f} MB")
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/utils/memory_monitor.py", line 119, in _write_emergency_dump
+    f.write(''.join(traceback.format_stack(frame)))
+
+Thread 8341790464:
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/main.py", line 258, in <module>
+    main()
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/main.py", line 244, in main
+    exit_code = app.exec()
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/views/main_window.py", line 289, in browse_file
+    progress_dialog.exec()

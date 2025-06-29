@@ -1,0 +1,14 @@
+2025-06-28 11:42:34,566 - __main__ - INFO - Starting application. Log file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/logs/app_20250628_114234.log
+2025-06-28 11:42:34,566 - __main__ - INFO - Global exception handler installed
+2025-06-28 11:42:34,566 - app.utils.memory_monitor - INFO - Memory monitoring started
+2025-06-28 11:42:34,570 - __main__ - INFO - Memory monitoring started
+2025-06-28 11:42:34,750 - app.views.main_window - INFO - Multithreading with maximum 10 threads
+2025-06-28 11:43:00,268 - app.utils.excel_safeguard - INFO - Starting robust Excel loading for: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-28 11:43:00,270 - app.utils.excel_safeguard - INFO - Starting manual chunked conversion to CSV: /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmp4ky4lojm.csv using engine: openpyxl
+2025-06-28 11:43:00,638 - app.utils.excel_safeguard - INFO - Estimated total rows: 9259
+2025-06-28 11:43:05,715 - app.utils.excel_safeguard - INFO - Chunked conversion successful, total rows: 9258
+2025-06-28 11:43:05,716 - app.controllers.data_cleaner - INFO - Preparing data iterator from temporary file: /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmp4ky4lojm.csv
+2025-06-28 11:43:05,718 - app.controllers.data_cleaner - INFO - Data iterator is ready for processing.
+2025-06-28 12:04:58,277 - app.utils.memory_monitor - INFO - Memory monitoring stopped. Peak usage: 338.734375 MB
+2025-06-28 12:04:58,277 - __main__ - INFO - Memory monitoring stopped
+2025-06-28 12:04:58,277 - __main__ - INFO - Application shutting down

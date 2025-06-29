@@ -1,0 +1,8 @@
+2025-06-27 15:06:43,014 - __main__ - INFO - Starting application. Log file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/logs/app_20250627_150643.log
+2025-06-27 15:08:04,886 - app.views.main_window - INFO - Starting to load file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 15:08:04,886 - app.views.main_window - INFO - File size: 612029 bytes, is_excel: True
+2025-06-27 15:08:04,886 - app.views.main_window - INFO - Using chunk_size: 50000
+2025-06-27 15:08:05,310 - app.controllers.data_cleaner - INFO - Detected 9 columns in /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 15:08:05,313 - app.controllers.data_cleaner - INFO - Attempting to open XLSX file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 15:08:05,593 - app.controllers.data_cleaner - INFO - Successfully estimated XLSX rows: 9259
+2025-06-27 15:08:05,593 - app.controllers.data_cleaner - INFO - Excel file has approximately 9259 rows

@@ -1,0 +1,21 @@
+2025-06-28 16:51:44,177 - app.main - INFO - Starting application. Log file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/logs/app_20250628_165144.log
+2025-06-28 16:51:44,178 - app.main - INFO - Global exception handler installed
+2025-06-28 16:51:44,179 - app.utils.memory_monitor - INFO - Memory monitoring started
+2025-06-28 16:51:44,179 - app.main - INFO - Memory monitoring started
+2025-06-28 16:51:44,375 - app.views.main_window - INFO - Multithreading with maximum 10 threads
+2025-06-28 16:51:44,493 - app.main - CRITICAL - Error during application execution: 'MainWindow' object has no attribute 'run_field_mapping'
+2025-06-28 16:51:44,493 - app.main - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/main.py", line 289, in main
+    window = MainWindow()
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/views/main_window.py", line 117, in __init__
+    self.setup_ui()
+    ~~~~~~~~~~~~~^^
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/views/main_window.py", line 141, in setup_ui
+    self.quantize_btn.clicked.connect(self.run_field_mapping)
+                                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute 'run_field_mapping'
+2025-06-28 16:51:53,199 - app.utils.memory_monitor - INFO - Memory monitoring stopped. Peak usage: 323.765625 MB
+2025-06-28 16:51:53,199 - app.main - INFO - Memory monitoring stopped
+2025-06-28 16:51:53,199 - app.main - INFO - Cleaning up face recognition resources
+2025-06-28 16:51:53,228 - app.main - INFO - Application shutting down

@@ -1,0 +1,11 @@
+=== APPLICATION CRASH REPORT ===
+Time: 2025-06-28 11:31:00.590301
+Exception type: <class 'AttributeError'>
+Exception value: 'PandasTableModel' object has no attribute 'set_data'
+
+=== TRACEBACK ===
+Traceback (most recent call last):
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/views/main_window.py", line 305, in on_load_complete
+    self.preview_model.setData(preview_df)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PandasTableModel' object has no attribute 'set_data'. Did you mean: 'setData'?

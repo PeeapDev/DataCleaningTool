@@ -1,0 +1,54 @@
+2025-06-28 10:50:38,356 - __main__ - INFO - Starting application. Log file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/logs/app_20250628_105038.log
+2025-06-28 10:50:38,360 - __main__ - INFO - Global exception handler installed
+2025-06-28 10:50:38,360 - app.utils.memory_monitor - INFO - Memory monitoring started
+2025-06-28 10:50:38,360 - __main__ - INFO - Memory monitoring started
+2025-06-28 10:50:38,513 - app.views.main_window - INFO - Multithreading with maximum 10 threads
+2025-06-28 10:50:54,538 - app.utils.excel_safeguard - INFO - Starting robust Excel loading for: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-28 10:50:54,539 - app.utils.excel_safeguard - INFO - Starting manual chunked conversion to CSV: /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmp8xisb7ob.csv using engine: openpyxl
+2025-06-28 10:50:54,949 - app.utils.excel_safeguard - INFO - Estimated total rows: 9259
+2025-06-28 10:51:00,731 - app.utils.excel_safeguard - INFO - Chunked conversion successful, total rows: 9258
+2025-06-28 10:51:00,732 - app.controllers.data_cleaner - INFO - Preparing data iterator from temporary file: /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmp8xisb7ob.csv
+2025-06-28 10:51:00,734 - app.controllers.data_cleaner - INFO - Data iterator is ready for processing.
+2025-06-28 10:51:00,734 - __main__ - CRITICAL - Unhandled exception:
+Traceback (most recent call last):
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/views/main_window.py", line 305, in on_load_complete
+    self.preview_model.set_data(preview_df)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PandasTableModel' object has no attribute 'set_data'. Did you mean: 'setData'?
+2025-06-28 10:51:00,736 - __main__ - INFO - Crash dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/crash_dumps/crash_dump_20250628_105100.log
+2025-06-28 10:54:41,168 - app.utils.excel_safeguard - INFO - Starting robust Excel loading for: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-28 10:54:41,171 - app.utils.excel_safeguard - INFO - Starting manual chunked conversion to CSV: /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmplkmjvxw_.csv using engine: openpyxl
+2025-06-28 10:54:41,453 - app.utils.excel_safeguard - INFO - Estimated total rows: 9259
+2025-06-28 10:54:46,457 - app.utils.excel_safeguard - INFO - Chunked conversion successful, total rows: 9258
+2025-06-28 10:54:46,458 - app.controllers.data_cleaner - INFO - Preparing data iterator from temporary file: /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmplkmjvxw_.csv
+2025-06-28 10:54:46,459 - app.controllers.data_cleaner - INFO - Data iterator is ready for processing.
+2025-06-28 10:54:46,459 - __main__ - CRITICAL - Unhandled exception:
+Traceback (most recent call last):
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/views/main_window.py", line 305, in on_load_complete
+    self.preview_model.set_data(preview_df)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PandasTableModel' object has no attribute 'set_data'. Did you mean: 'setData'?
+2025-06-28 10:54:46,460 - __main__ - INFO - Crash dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/crash_dumps/crash_dump_20250628_105446.log
+2025-06-28 11:14:15,625 - __main__ - CRITICAL - Unhandled exception:
+Traceback (most recent call last):
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/views/main_window.py", line 264, in browse_file
+    def browse_file(self):
+    
+KeyboardInterrupt
+2025-06-28 11:14:15,629 - __main__ - INFO - Crash dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/crash_dumps/crash_dump_20250628_111415.log
+2025-06-28 11:30:55,142 - app.utils.excel_safeguard - INFO - Starting robust Excel loading for: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-28 11:30:55,147 - app.utils.excel_safeguard - INFO - Starting manual chunked conversion to CSV: /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmpex7c3_mk.csv using engine: openpyxl
+2025-06-28 11:30:55,465 - app.utils.excel_safeguard - INFO - Estimated total rows: 9259
+2025-06-28 11:31:00,584 - app.utils.excel_safeguard - INFO - Chunked conversion successful, total rows: 9258
+2025-06-28 11:31:00,585 - app.controllers.data_cleaner - INFO - Preparing data iterator from temporary file: /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmpex7c3_mk.csv
+2025-06-28 11:31:00,587 - app.controllers.data_cleaner - INFO - Data iterator is ready for processing.
+2025-06-28 11:31:00,588 - __main__ - CRITICAL - Unhandled exception:
+Traceback (most recent call last):
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/views/main_window.py", line 305, in on_load_complete
+    self.preview_model.setData(preview_df)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PandasTableModel' object has no attribute 'set_data'. Did you mean: 'setData'?
+2025-06-28 11:31:00,590 - __main__ - INFO - Crash dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/crash_dumps/crash_dump_20250628_113100.log
+2025-06-28 11:31:26,358 - app.utils.memory_monitor - INFO - Memory monitoring stopped. Peak usage: 388.0 MB
+2025-06-28 11:31:26,359 - __main__ - INFO - Memory monitoring stopped
+2025-06-28 11:31:26,359 - __main__ - INFO - Application shutting down

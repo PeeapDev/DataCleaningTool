@@ -1,0 +1,18 @@
+2025-06-28 10:25:17,343 - __main__ - INFO - Starting application. Log file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/logs/app_20250628_102517.log
+2025-06-28 10:25:17,344 - __main__ - INFO - Global exception handler installed
+2025-06-28 10:25:17,344 - app.utils.memory_monitor - INFO - Memory monitoring started
+2025-06-28 10:25:17,348 - __main__ - INFO - Memory monitoring started
+2025-06-28 10:25:17,523 - app.views.main_window - INFO - Multithreading with maximum 10 threads
+2025-06-28 10:28:39,294 - app.utils.excel_safeguard - INFO - Starting robust Excel loading for: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-28 10:28:39,298 - app.utils.excel_safeguard - ERROR - The unified chunked loader failed: read_excel() got an unexpected keyword argument 'chunksize'
+2025-06-28 10:28:39,300 - app.utils.excel_safeguard - DEBUG - Traceback (most recent call last):
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/utils/excel_safeguard.py", line 94, in _load_excel_chunked
+    excel_iterator = pd.read_excel(file_path, chunksize=chunk_size, engine=engine)
+TypeError: read_excel() got an unexpected keyword argument 'chunksize'
+
+2025-06-28 10:28:39,300 - app.utils.excel_safeguard - ERROR - The unified Excel loading strategy failed. Reason: The unified chunked loader failed: read_excel() got an unexpected keyword argument 'chunksize'
+2025-06-28 10:28:39,300 - app.utils.excel_safeguard - DEBUG - Removed temp file: /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmp1fusgbte.csv
+2025-06-28 10:28:39,308 - app.views.main_window - ERROR - File loading failed: The unified chunked loader failed: read_excel() got an unexpected keyword argument 'chunksize'
+2025-06-28 11:31:35,649 - app.utils.memory_monitor - INFO - Memory monitoring stopped. Peak usage: 302.21875 MB
+2025-06-28 11:31:35,650 - __main__ - INFO - Memory monitoring stopped
+2025-06-28 11:31:35,650 - __main__ - INFO - Application shutting down

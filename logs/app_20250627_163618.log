@@ -1,0 +1,15 @@
+2025-06-27 16:36:18,228 - __main__ - INFO - Starting application. Log file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/logs/app_20250627_163618.log
+2025-06-27 16:36:18,228 - __main__ - INFO - Global exception handler installed
+2025-06-27 16:36:18,229 - app.utils.memory_monitor - INFO - Memory monitoring started
+2025-06-27 16:36:18,229 - __main__ - INFO - Memory monitoring started
+2025-06-27 16:36:56,943 - app.views.main_window - ERROR - Error loading data: 'DataCleaner' object has no attribute 'clear'
+2025-06-27 16:36:57,320 - __main__ - CRITICAL - Unhandled exception:
+Traceback (most recent call last):
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/views/main_window.py", line 286, in check_loading_status
+    if self.data_cleaner.get_data() is None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataCleaner' object has no attribute 'get_data'. Did you mean: 'raw_data'?
+2025-06-27 16:36:57,323 - __main__ - INFO - Crash dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/crash_dumps/crash_dump_20250627_163657.log
+2025-06-27 17:49:31,987 - app.utils.memory_monitor - INFO - Memory monitoring stopped. Peak usage: 214.328125 MB
+2025-06-27 17:49:31,988 - __main__ - INFO - Memory monitoring stopped
+2025-06-27 17:49:31,988 - __main__ - INFO - Application shutting down

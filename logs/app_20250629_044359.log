@@ -1,0 +1,22 @@
+2025-06-29 04:43:59,135 - app.main - INFO - Starting application. Log file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/logs/app_20250629_044359.log
+2025-06-29 04:43:59,136 - app.main - INFO - Global exception handler installed
+2025-06-29 04:43:59,136 - app.utils.memory_monitor - INFO - Memory monitoring started
+2025-06-29 04:43:59,136 - app.main - INFO - Memory monitoring started
+2025-06-29 04:44:01,176 - app.views.main_window - INFO - Multithreading with maximum 10 threads
+2025-06-29 04:44:01,364 - app.main - CRITICAL - Error during application execution: 'MainWindow' object has no attribute 'browse_student_photo'
+2025-06-29 04:44:01,364 - app.main - ERROR - Exception details:
+Traceback (most recent call last):
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/main.py", line 291, in main
+    window = MainWindow()
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/views/main_window.py", line 117, in __init__
+    self.setup_menu()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/views/main_window.py", line 269, in setup_menu
+    ocr_action.triggered.connect(self.browse_student_photo)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MainWindow' object has no attribute 'browse_student_photo'. Did you mean: '_process_student_photos'?
+2025-06-29 04:49:34,138 - app.utils.memory_monitor - INFO - Memory monitoring stopped. Peak usage: 209.796875 MB
+2025-06-29 04:49:34,140 - app.main - INFO - Memory monitoring stopped
+2025-06-29 04:49:34,140 - app.main - INFO - Cleaning up face recognition resources
+2025-06-29 04:49:34,144 - app.main - INFO - Running garbage collection
+2025-06-29 04:49:34,194 - app.main - INFO - Application shutting down

@@ -1,0 +1,22 @@
+2025-06-27 17:09:22,883 - __main__ - INFO - Starting application. Log file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/logs/app_20250627_170922.log
+2025-06-27 17:09:22,884 - __main__ - INFO - Global exception handler installed
+2025-06-27 17:09:22,884 - app.utils.memory_monitor - INFO - Memory monitoring started
+2025-06-27 17:09:22,884 - __main__ - INFO - Memory monitoring started
+2025-06-27 17:10:15,809 - app.controllers.data_cleaner - INFO - Clearing previous data and resetting state.
+2025-06-27 17:10:15,831 - app.views.main_window - INFO - Loading file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx (0.58 MB)
+2025-06-27 17:10:15,831 - app.controllers.data_cleaner - INFO - Loading data from /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 17:10:16,294 - app.controllers.data_cleaner - INFO - Detected 9 columns in /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 17:10:16,625 - app.controllers.data_cleaner - INFO - Got preview with 9 columns
+2025-06-27 17:10:16,625 - app.controllers.data_cleaner - INFO - Using Excel safeguard for safer loading
+2025-06-27 17:10:16,629 - app.utils.excel_safeguard - INFO - Starting safe Excel loading for: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 17:10:16,630 - app.utils.excel_safeguard - INFO - Excel file size: 612029 bytes, using engine: openpyxl
+2025-06-27 17:10:16,630 - app.utils.excel_safeguard - INFO - Attempting Excel loading strategy 1
+2025-06-27 17:10:16,966 - app.utils.excel_safeguard - INFO - Direct load preview successful: 10 rows
+2025-06-27 17:10:17,696 - app.utils.excel_safeguard - INFO - Direct load successful, converted to CSV: /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmp2s5sjsjn.csv
+2025-06-27 17:10:17,696 - app.utils.excel_safeguard - INFO - Excel loading strategy 1 succeeded
+2025-06-27 17:10:17,696 - app.controllers.data_cleaner - INFO - Excel safely converted to CSV at /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmp2s5sjsjn.csv
+2025-06-27 17:10:17,699 - app.controllers.data_cleaner - INFO - Estimated 13876 rows in converted CSV
+2025-06-27 17:10:17,700 - app.views.main_window - ERROR - Error loading data: 'PandasTableModel' object has no attribute 'set_data'
+2025-06-27 17:49:11,324 - app.utils.memory_monitor - INFO - Memory monitoring stopped. Peak usage: 219.953125 MB
+2025-06-27 17:49:11,325 - __main__ - INFO - Memory monitoring stopped
+2025-06-27 17:49:11,325 - __main__ - INFO - Application shutting down

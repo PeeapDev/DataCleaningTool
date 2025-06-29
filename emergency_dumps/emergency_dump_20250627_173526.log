@@ -1,0 +1,27 @@
+=== EMERGENCY MEMORY DUMP ===
+Time: 2025-06-27 17:35:26.236516
+Reason: Critical memory usage: 203552.00 MB
+Current memory: 203552.00 MB
+Peak memory: 203552.00 MB
+
+=== STACK TRACE ===
+
+Thread 6112227328:
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py", line 1012, in _bootstrap
+    self._bootstrap_inner()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py", line 1041, in _bootstrap_inner
+    self.run()
+  File "/opt/homebrew/Cellar/python@3.13/3.13.3/Frameworks/Python.framework/Versions/3.13/lib/python3.13/threading.py", line 992, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/utils/memory_monitor.py", line 91, in _monitor_thread_func
+    self._write_emergency_dump(f"Critical memory usage: {current_usage:.2f} MB")
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/utils/memory_monitor.py", line 119, in _write_emergency_dump
+    f.write(''.join(traceback.format_stack(frame)))
+
+Thread 8341790464:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/main.py", line 258, in <module>
+    main()
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/main.py", line 244, in main
+    exit_code = app.exec()

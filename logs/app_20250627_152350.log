@@ -1,0 +1,99 @@
+2025-06-27 15:23:50,450 - __main__ - INFO - Starting application. Log file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/logs/app_20250627_152350.log
+2025-06-27 15:23:50,450 - __main__ - INFO - Global exception handler installed
+2025-06-27 15:23:50,450 - app.utils.memory_monitor - INFO - Memory monitoring started
+2025-06-27 15:23:50,450 - __main__ - INFO - Memory monitoring started
+2025-06-27 15:23:50,472 - app.utils.memory_monitor - CRITICAL - DANGEROUS MEMORY SPIKE: 90896.00 MB increase!
+2025-06-27 15:23:50,473 - app.utils.memory_monitor - CRITICAL - Writing emergency memory dump and enabling protective measures
+2025-06-27 15:23:50,477 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152350.log
+2025-06-27 15:23:50,477 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 90896.00 MB!
+2025-06-27 15:23:50,477 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:23:50,478 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152350.log
+2025-06-27 15:23:51,478 - app.utils.memory_monitor - CRITICAL - DANGEROUS MEMORY SPIKE: 83824.00 MB increase!
+2025-06-27 15:23:51,478 - app.utils.memory_monitor - CRITICAL - Writing emergency memory dump and enabling protective measures
+2025-06-27 15:23:51,479 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152351.log
+2025-06-27 15:23:51,479 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 174720.00 MB!
+2025-06-27 15:23:51,479 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:23:51,479 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152351.log
+2025-06-27 15:23:52,483 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 174720.00 MB!
+2025-06-27 15:23:52,483 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:23:52,484 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152352.log
+2025-06-27 15:23:53,484 - app.utils.memory_monitor - CRITICAL - DANGEROUS MEMORY SPIKE: 1072.00 MB increase!
+2025-06-27 15:23:53,484 - app.utils.memory_monitor - CRITICAL - Writing emergency memory dump and enabling protective measures
+2025-06-27 15:23:53,484 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152353.log
+2025-06-27 15:23:53,484 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 175792.00 MB!
+2025-06-27 15:23:53,485 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:23:53,485 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152353.log
+2025-06-27 15:23:54,485 - app.utils.memory_monitor - CRITICAL - DANGEROUS MEMORY SPIKE: 34848.00 MB increase!
+2025-06-27 15:23:54,485 - app.utils.memory_monitor - CRITICAL - Writing emergency memory dump and enabling protective measures
+2025-06-27 15:23:54,486 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152354.log
+2025-06-27 15:23:54,486 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 210640.00 MB!
+2025-06-27 15:23:54,486 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:23:54,487 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152354.log
+2025-06-27 15:23:55,490 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 210640.00 MB!
+2025-06-27 15:23:55,490 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:23:55,490 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152355.log
+2025-06-27 15:23:56,491 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 210640.00 MB!
+2025-06-27 15:23:56,491 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:23:56,492 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152356.log
+2025-06-27 15:23:57,493 - app.utils.memory_monitor - CRITICAL - DANGEROUS MEMORY SPIKE: 8720.00 MB increase!
+2025-06-27 15:23:57,493 - app.utils.memory_monitor - CRITICAL - Writing emergency memory dump and enabling protective measures
+2025-06-27 15:23:57,494 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152357.log
+2025-06-27 15:23:57,494 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:23:57,494 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:23:57,494 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152357.log
+2025-06-27 15:23:58,495 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:23:58,495 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:23:58,496 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152358.log
+2025-06-27 15:23:59,497 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:23:59,498 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:23:59,498 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152359.log
+2025-06-27 15:24:00,498 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:24:00,498 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:24:00,499 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152400.log
+2025-06-27 15:24:01,499 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:24:01,499 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:24:01,500 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152401.log
+2025-06-27 15:24:02,505 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:24:02,505 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:24:02,505 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152402.log
+2025-06-27 15:24:03,506 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:24:03,506 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:24:03,506 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152403.log
+2025-06-27 15:24:04,507 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:24:04,507 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:24:04,507 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152404.log
+2025-06-27 15:24:05,510 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:24:05,510 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:24:05,510 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152405.log
+2025-06-27 15:24:06,511 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:24:06,512 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:24:06,512 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152406.log
+2025-06-27 15:24:07,515 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:24:07,515 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:24:07,515 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152407.log
+2025-06-27 15:24:08,515 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:24:08,516 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:24:08,516 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152408.log
+2025-06-27 15:24:09,517 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:24:09,517 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:24:09,518 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152409.log
+2025-06-27 15:24:10,519 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:24:10,519 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:24:10,519 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152410.log
+2025-06-27 15:24:11,521 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 219360.00 MB!
+2025-06-27 15:24:11,521 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:24:11,521 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152411.log
+2025-06-27 15:24:12,164 - app.views.main_window - INFO - Starting to load file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 15:24:12,165 - app.views.main_window - INFO - File size: 612029 bytes, is_excel: True
+2025-06-27 15:24:12,165 - app.views.main_window - INFO - Using chunk_size: 50000
+2025-06-27 15:24:12,165 - app.controllers.data_cleaner - INFO - Loading data from /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 15:24:12,522 - app.utils.memory_monitor - CRITICAL - DANGEROUS MEMORY SPIKE: 21568.00 MB increase!
+2025-06-27 15:24:12,528 - app.utils.memory_monitor - CRITICAL - Writing emergency memory dump and enabling protective measures
+2025-06-27 15:24:12,583 - app.controllers.data_cleaner - INFO - Detected 9 columns in /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 15:24:12,633 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152412.log
+2025-06-27 15:24:12,642 - app.utils.memory_monitor - CRITICAL - CRITICAL MEMORY USAGE: 240928.00 MB!
+2025-06-27 15:24:12,648 - app.utils.memory_monitor - CRITICAL - Initiating emergency memory protection
+2025-06-27 15:24:12,697 - app.utils.memory_monitor - INFO - Emergency memory dump written to /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/emergency_dumps/emergency_dump_20250627_152412.log
+2025-06-27 15:24:12,868 - app.controllers.data_cleaner - INFO - Got preview with 9 columns
+2025-06-27 15:24:12,868 - app.controllers.data_cleaner - INFO - Using specialized Excel processor for safer loading
+2025-06-27 15:24:12,871 - app.utils.excel_processor - INFO - Starting safe Excel processing for /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx

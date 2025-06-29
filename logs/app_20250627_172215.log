@@ -1,0 +1,59 @@
+2025-06-27 17:22:15,037 - __main__ - INFO - Starting application. Log file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/logs/app_20250627_172215.log
+2025-06-27 17:22:15,037 - __main__ - INFO - Global exception handler installed
+2025-06-27 17:22:15,038 - app.utils.memory_monitor - INFO - Memory monitoring started
+2025-06-27 17:22:15,038 - __main__ - INFO - Memory monitoring started
+2025-06-27 17:22:34,045 - app.controllers.data_cleaner - INFO - Clearing previous data and resetting state.
+2025-06-27 17:22:34,081 - app.views.main_window - INFO - Loading file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx (0.58 MB)
+2025-06-27 17:22:34,082 - app.controllers.data_cleaner - INFO - Loading data from /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 17:22:34,543 - app.controllers.data_cleaner - INFO - Detected 9 columns in /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 17:22:34,842 - app.controllers.data_cleaner - INFO - Got preview with 9 columns
+2025-06-27 17:22:34,842 - app.controllers.data_cleaner - INFO - Using Excel safeguard for safer loading
+2025-06-27 17:22:34,842 - app.utils.excel_safeguard - INFO - Starting safe Excel loading for: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 17:22:34,849 - app.utils.excel_safeguard - INFO - Excel file size: 612029 bytes, using engine: openpyxl
+2025-06-27 17:22:34,849 - app.utils.excel_safeguard - INFO - Attempting Excel loading strategy 1
+2025-06-27 17:22:34,854 - app.utils.excel_safeguard - WARNING - Direct (chunked) load failed: read_excel() got an unexpected keyword argument 'iterator'
+2025-06-27 17:22:34,854 - app.utils.excel_safeguard - DEBUG - Traceback (most recent call last):
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/utils/excel_safeguard.py", line 113, in _try_direct_load
+    iterator = pd.read_excel(file_path, iterator=True, chunksize=chunk_size)
+TypeError: read_excel() got an unexpected keyword argument 'iterator'
+
+2025-06-27 17:22:34,854 - app.utils.excel_safeguard - INFO - Attempting Excel loading strategy 2
+2025-06-27 17:22:34,854 - app.utils.excel_safeguard - INFO - Trying fallback engine: xlrd
+2025-06-27 17:22:34,856 - app.utils.excel_safeguard - WARNING - Fallback engine failed: Excel xlsx file; not supported
+2025-06-27 17:22:34,856 - app.utils.excel_safeguard - INFO - Attempting Excel loading strategy 3
+2025-06-27 17:22:34,857 - app.utils.excel_safeguard - INFO - Attempting emergency conversion with external tools
+2025-06-27 17:22:34,857 - app.utils.excel_safeguard - INFO - Excel file appears to be XLSX (zip format)
+2025-06-27 17:22:34,857 - app.utils.excel_safeguard - INFO - Excel loading strategy 3 succeeded
+2025-06-27 17:22:34,857 - app.controllers.data_cleaner - INFO - Excel safely converted to CSV at /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmp9zq2h4eg.csv
+2025-06-27 17:22:34,858 - app.controllers.data_cleaner - INFO - Estimated 4 rows in converted CSV
+2025-06-27 17:22:34,858 - app.views.main_window - ERROR - Error loading data: 'PandasTableModel' object has no attribute 'set_data'
+2025-06-27 17:30:11,077 - app.controllers.data_cleaner - INFO - Clearing previous data and resetting state.
+2025-06-27 17:30:11,078 - app.controllers.data_cleaner - INFO - Removed temporary file: /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmp9zq2h4eg.csv
+2025-06-27 17:30:11,114 - app.views.main_window - INFO - Loading file: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx (0.58 MB)
+2025-06-27 17:30:11,114 - app.controllers.data_cleaner - INFO - Loading data from /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 17:30:11,482 - app.controllers.data_cleaner - INFO - Detected 9 columns in /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 17:30:11,830 - app.controllers.data_cleaner - INFO - Got preview with 9 columns
+2025-06-27 17:30:11,831 - app.controllers.data_cleaner - INFO - Using Excel safeguard for safer loading
+2025-06-27 17:30:11,831 - app.utils.excel_safeguard - INFO - Starting safe Excel loading for: /Users/mohamedabdulkabia/Desktop/school.edu.sl/school db/2017-School-List.xlsx
+2025-06-27 17:30:11,833 - app.utils.excel_safeguard - INFO - Excel file size: 612029 bytes, using engine: openpyxl
+2025-06-27 17:30:11,833 - app.utils.excel_safeguard - INFO - Attempting Excel loading strategy 1
+2025-06-27 17:30:11,835 - app.utils.excel_safeguard - WARNING - Direct (chunked) load failed: read_excel() got an unexpected keyword argument 'iterator'
+2025-06-27 17:30:11,836 - app.utils.excel_safeguard - DEBUG - Traceback (most recent call last):
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/utils/excel_safeguard.py", line 113, in _try_direct_load
+    logger.info(f"Found {total_rows:,} rows using openpyxl.")
+       ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: read_excel() got an unexpected keyword argument 'iterator'
+
+2025-06-27 17:30:11,836 - app.utils.excel_safeguard - INFO - Attempting Excel loading strategy 2
+2025-06-27 17:30:11,837 - app.utils.excel_safeguard - INFO - Trying fallback engine: xlrd
+2025-06-27 17:30:11,838 - app.utils.excel_safeguard - WARNING - Fallback engine failed: Excel xlsx file; not supported
+2025-06-27 17:30:11,838 - app.utils.excel_safeguard - INFO - Attempting Excel loading strategy 3
+2025-06-27 17:30:11,839 - app.utils.excel_safeguard - INFO - Attempting emergency conversion with external tools
+2025-06-27 17:30:11,839 - app.utils.excel_safeguard - INFO - Excel file appears to be XLSX (zip format)
+2025-06-27 17:30:11,839 - app.utils.excel_safeguard - INFO - Excel loading strategy 3 succeeded
+2025-06-27 17:30:11,839 - app.controllers.data_cleaner - INFO - Excel safely converted to CSV at /var/folders/yy/bqz5m2wx4l78by5hmygf7snc0000gn/T/tmp9s3jbk2q.csv
+2025-06-27 17:30:11,839 - app.controllers.data_cleaner - INFO - Estimated 4 rows in converted CSV
+2025-06-27 17:30:11,839 - app.views.main_window - ERROR - Error loading data: 'PandasTableModel' object has no attribute 'set_data'
+2025-06-27 17:49:04,293 - app.utils.memory_monitor - INFO - Memory monitoring stopped. Peak usage: 219.8125 MB
+2025-06-27 17:49:04,294 - __main__ - INFO - Memory monitoring stopped
+2025-06-27 17:49:04,294 - __main__ - INFO - Application shutting down

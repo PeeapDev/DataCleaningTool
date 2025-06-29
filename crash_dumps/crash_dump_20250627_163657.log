@@ -1,0 +1,11 @@
+=== APPLICATION CRASH REPORT ===
+Time: 2025-06-27 16:36:57.323065
+Exception type: <class 'AttributeError'>
+Exception value: 'DataCleaner' object has no attribute 'get_data'
+
+=== TRACEBACK ===
+Traceback (most recent call last):
+  File "/Users/mohamedabdulkabia/Desktop/school.edu.sl/National/DataCleaningTool/app/views/main_window.py", line 286, in check_loading_status
+    if self.data_cleaner.get_data() is None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataCleaner' object has no attribute 'get_data'. Did you mean: 'raw_data'?
