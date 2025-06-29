@@ -58,14 +58,14 @@ class ExcelSafeProcessor:
         logger.info(f"Starting safe Excel processing for {file_path}")
         
         if progress_callback:
-            progress_callback(5, "Analyzing Excel file...")
+            progress_callback(5, "Loading Excel file...")
         
-        # Step 1: Try to get a quick preview using head
+        # Load the full dataset - no row limit
         preview_df = None
         try:
-            logger.info("Getting preview of Excel file")
-            preview_df = pd.read_excel(file_path, nrows=10)
-            logger.info(f"Successfully read preview of {len(preview_df)} rows")
+            logger.info("Loading complete Excel file")
+            preview_df = pd.read_excel(file_path)  # No row limit - show ALL rows
+            logger.info(f"Successfully loaded complete dataset with {len(preview_df)} rows")
         except Exception as e:
             logger.error(f"Failed to read Excel preview: {str(e)}")
             # Continue with other methods even if preview fails

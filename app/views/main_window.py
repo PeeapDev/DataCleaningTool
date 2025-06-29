@@ -4,11 +4,16 @@ Simplified Main window implementation for Education Data Cleaning Tool.
 
 import os
 import sys
+import time
 import logging
-import datetime
+import threading
 import platform
 import subprocess
-import traceback
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('Qt5Agg')
 from PyQt6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, 
     QPushButton, QLabel, QFileDialog, QTableView, 
@@ -153,6 +158,19 @@ class MainWindow(QMainWindow):
         
         # Middle section - Preview table
         main_layout.addWidget(QLabel("<b>Data Preview</b>"))
+        
+        # Add search bar section
+        search_layout = QHBoxLayout()
+        search_label = QLabel("Search:")
+        self.search_input = QLineEdit()
+        self.search_input.setPlaceholderText("Type to search across all columns...")
+        self.search_input.setClearButtonEnabled(True)  # Add clear (X) button in the search field
+        self.search_input.textChanged.connect(self.on_search_changed)
+        self.search_status_label = QLabel("")
+        search_layout.addWidget(search_label)
+        search_layout.addWidget(self.search_input, 1)  # Give search box more space
+        search_layout.addWidget(self.search_status_label)
+        main_layout.addLayout(search_layout)
         
         self.preview_table = QTableView()
         self.preview_table.setModel(self.preview_model)
@@ -854,32 +872,6 @@ class MainWindow(QMainWindow):
                         f"Failed to extract information from the photo:\n{self.ocr_results.get('error', 'Unknown error')}"
                     )
                     
-                # Clear results
-                del self.ocr_results
-
-    def show_logs(self):
-        """Find and open the most recent log file."""
-        log_dir = "logs"
-        if not os.path.isdir(log_dir):
-            QMessageBox.warning(self, "No Logs Found", "The logs directory does not exist.")
-            return
-
-        log_files = [os.path.join(log_dir, f) for f in os.listdir(log_dir) if f.endswith('.log')]
-        if not log_files:
-            QMessageBox.warning(self, "No Logs Found", "No log files were found in the logs directory.")
-            return
-
-        latest_log = max(log_files, key=os.path.getmtime)
-        
-        try:
-            if platform.system() == "Windows":
-                os.startfile(latest_log)
-            elif platform.system() == "Darwin": # macOS
-                subprocess.run(["open", latest_log], check=True)
-            else: # Linux
-                subprocess.run(["xdg-open", latest_log], check=True)
-        except Exception as e:
-            logger.error(f"Failed to open log file: {e}")
             QMessageBox.critical(self, "Error", f"Could not open the log file: {e}")
 
     def _update_analytics(self, df):
@@ -960,3 +952,47 @@ class MainWindow(QMainWindow):
     # Add Quantize AI Methods
     run_field_mapping = run_field_mapping
     apply_field_mapping = apply_field_mapping
+    
+    def on_search_changed(self, text):
+        """Handle search text changes and filter the data preview."""
+        try:
+            # Apply search filter to the model
+            self.preview_model.search(text)
+            
+            # Update status label with current row count information
+            status_text = self.preview_model.get_row_count_status()
+            self.search_status_label.setText(status_text)
+            
+            # Set status label color based on whether filtering is active
+            if text.strip():
+                self.search_status_label.setStyleSheet("color: blue;")
+            else:
+                self.search_status_label.setStyleSheet("")
+                
+        except Exception as e:
+            logger.error(f"Search error: {str(e)}")
+            self.status_bar.showMessage(f"Search error: {str(e)}", 3000)
+            
+    def show_logs(self):
+        """Find and open the most recent log file."""
+        logs_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "logs")
+        if os.path.exists(logs_dir):
+            log_files = [os.path.join(logs_dir, f) for f in os.listdir(logs_dir) 
+                      if f.startswith("app_") and f.endswith(".log")]
+            if log_files:
+                latest_log = max(log_files, key=os.path.getctime)
+                
+                try:
+                    if platform.system() == "Windows":
+                        os.startfile(latest_log)
+                    elif platform.system() == "Darwin":  # macOS
+                        subprocess.run(["open", latest_log], check=True)
+                    else:  # Linux
+                        subprocess.run(["xdg-open", latest_log], check=True)
+                except Exception as e:
+                    logger.error(f"Failed to open log file: {e}")
+                    QMessageBox.critical(self, "Error", f"Could not open the log file: {e}")
+            else:
+                QMessageBox.information(self, "No Logs", "No log files found.")
+        else:
+            QMessageBox.information(self, "No Logs Directory", "Logs directory not found.")

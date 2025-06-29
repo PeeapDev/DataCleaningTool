@@ -102,10 +102,19 @@ class ExcelSafeguard:
             chunk_size = 1000
             is_first_chunk = True
 
-            # First, try to estimate total rows to provide better progress feedback.
+            # First, load the complete dataset for preview (no row limit)
             try:
+                # Attempt to load the entire file for preview
+                logger.info("Loading complete dataset for preview")
+                preview_df = pd.read_excel(file_path, engine=engine)
+                logger.info(f"Successfully loaded full preview with {len(preview_df)} rows")
+                
+                # Estimate total rows for progress feedback
+                total_rows = len(preview_df)
+                
+                # Still need to process in chunks for CSV conversion
                 import openpyxl
-                if file_extension == '.xlsx':
+                if file_extension == '.xlsx' and total_rows == 0:
                     wb = openpyxl.load_workbook(file_path, read_only=True)
                     sheet = wb.active
                     total_rows = sheet.max_row
@@ -126,7 +135,8 @@ class ExcelSafeguard:
                         break
                         
                     if is_first_chunk:
-                        preview_df = chunk.head(10).copy()
+                        # Don't override preview_df as we already loaded the full dataset
+                        # Just write the chunk to CSV
                         chunk.to_csv(f, index=False, header=True)
                         is_first_chunk = False
                     else:
