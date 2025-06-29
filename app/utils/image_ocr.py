@@ -233,6 +233,63 @@ except ImportError:
     face_recognition = None
     logger.warning("face_recognition library not found. Facial similarity features will be disabled.")
 
+
+def process_student_image(image_path):
+    """Process a student ID or document photo to extract information and detect faces.
+    
+    Args:
+        image_path: Path to the image file
+        
+    Returns:
+        Dictionary with extracted information and face detection results
+    """
+    logger.info(f"Processing student photo: {image_path}")
+    
+    # Process with OCR
+    extracted_info, processed_image = image_ocr.process_image(image_path)
+    
+    # Initialize result dict
+    result = {
+        'image_path': image_path,
+        'student_id': None,
+        'name': None,
+        'date_of_birth': None,
+        'face_detected': False,
+        'face_count': 0,
+        'face_locations': []
+    }
+    
+    # Add OCR results if available
+    if extracted_info:
+        result.update(extracted_info)
+    
+    # Perform face detection if possible
+    try:
+        if face_recognition:
+            # Load image for face detection
+            image = face_recognition.load_image_file(image_path)
+            
+            # Detect face locations (returns list of tuples with (top, right, bottom, left))
+            face_locations = face_recognition.face_locations(image)
+            
+            # Get face encodings if faces are found
+            face_encodings = face_recognition.face_encodings(image, face_locations) if face_locations else []
+            
+            # Add face detection results
+            result['face_detected'] = len(face_locations) > 0
+            result['face_count'] = len(face_locations)
+            result['face_locations'] = face_locations
+            result['has_face_encoding'] = len(face_encodings) > 0
+            
+            logger.info(f"Face detection results: {len(face_locations)} faces found")
+        else:
+            logger.warning("Face recognition library not available, skipping face detection")
+    except Exception as e:
+        logger.error(f"Face detection error: {e}")
+        result['face_detection_error'] = str(e)
+    
+    return result
+
 class PhotoProcessor:
     """Handles loading, processing, and comparing student photos for facial similarity."""
 

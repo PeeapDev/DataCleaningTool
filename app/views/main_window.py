@@ -739,8 +739,13 @@ class MainWindow(QMainWindow):
                 'file_path': file_path,
                 'student_id': result.get('student_id', 'Not detected'),
                 'name': result.get('name', 'Not detected'),
-                'dob': result.get('dob', 'Not detected'),
-                'success': True
+                'dob': result.get('date_of_birth', 'Not detected'),
+                'success': True,
+                'face_detected': result.get('face_detected', False),
+                'face_count': result.get('face_count', 0),
+                'face_locations': result.get('face_locations', []),
+                'has_face_encoding': result.get('has_face_encoding', False),
+                'face_detection_error': result.get('face_detection_error', None)
             }
             
         except Exception as e:
@@ -771,7 +776,7 @@ class MainWindow(QMainWindow):
                     # Create dialog with results
                     dialog = QDialog(self)
                     dialog.setWindowTitle("Student Photo OCR Results")
-                    dialog.resize(400, 300)
+                    dialog.resize(500, 500)
                     
                     # Layout
                     layout = QVBoxLayout(dialog)
@@ -786,10 +791,59 @@ class MainWindow(QMainWindow):
                     # Add a note about accuracy
                     layout.addWidget(QLabel("<i>Note: OCR results may require verification</i>"))
                     
-                    # Close button
-                    close_btn = QPushButton("Close")
-                    close_btn.clicked.connect(dialog.accept)
-                    layout.addWidget(close_btn)
+                    # Add face detection results if available
+                    layout.addWidget(QLabel("<h3>Face Detection Results</h3>"))
+                    
+                    # Create horizontal layout for image preview and face info
+                    h_layout = QHBoxLayout()
+                    
+                    # Add image preview
+                    try:
+                        pixmap = QPixmap(self.ocr_results['file_path'])
+                        if not pixmap.isNull():
+                            # Scale to a reasonable size
+                            pixmap = pixmap.scaled(200, 200, Qt.AspectRatioMode.KeepAspectRatio)
+                            image_label = QLabel()
+                            image_label.setPixmap(pixmap)
+                            image_label.setFixedSize(200, 200)
+                            image_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+                            image_label.setScaledContents(True)
+                            h_layout.addWidget(image_label)
+                    except Exception as e:
+                        logger.error(f"Error displaying image: {e}")
+                    
+                    # Add face detection information
+                    face_info = QVBoxLayout()
+                    face_detected = self.ocr_results.get('face_detected', False)
+                    face_count = self.ocr_results.get('face_count', 0)
+                    
+                    if face_detected:
+                        face_info.addWidget(QLabel(f"<b>Face Detected:</b> <span style='color:green'>Yes</span>"))
+                        face_info.addWidget(QLabel(f"<b>Number of Faces:</b> {face_count}"))
+                        
+                        # Add more details if available
+                        if 'face_locations' in self.ocr_results and self.ocr_results['face_locations']:
+                            locations_text = ", ".join([f"({t},{r},{b},{l})" for t, r, b, l in self.ocr_results['face_locations'][:3]])
+                            face_info.addWidget(QLabel(f"<b>Face Locations:</b> {locations_text}"))
+                            
+                        if 'has_face_encoding' in self.ocr_results:
+                            has_encoding = "Yes" if self.ocr_results['has_face_encoding'] else "No"
+                            face_info.addWidget(QLabel(f"<b>Face Encoding:</b> {has_encoding}"))
+                    else:
+                        face_info.addWidget(QLabel(f"<b>Face Detected:</b> <span style='color:red'>No</span>"))
+                        if 'face_detection_error' in self.ocr_results:
+                            face_info.addWidget(QLabel(f"<b>Error:</b> {self.ocr_results['face_detection_error']}"))
+                    
+                    h_layout.addLayout(face_info)
+                    layout.addLayout(h_layout)
+                    
+                    # Add spacer
+                    layout.addItem(QSpacerItem(20, 20, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding))
+                    
+                    # Add buttons
+                    button_box = QDialogButtonBox(QDialogButtonBox.StandardButton.Ok)
+                    button_box.accepted.connect(dialog.accept)
+                    layout.addWidget(button_box)
                     
                     # Show dialog
                     dialog.exec()
